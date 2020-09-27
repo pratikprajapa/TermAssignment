@@ -1,0 +1,283 @@
+<html>
+<!--
+  Website Designed and created by Pratik Prajapati
+  web-APIs used: Google Fonts, Fonts Awesome
+  Online resource used: Mountain Background, Avatar (Google Images - images.google.com)
+  -->
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/font-awesome.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Maven+Pro">
+<style>
+  body{
+    font-family: Maven Pro;
+  }
+  /* Fixing unknown whitespace at bottom of page */
+  html{
+    background: #000000;
+  }
+  .aboutMeSec{
+    background: #ffffff;
+    margin-bottom: 0px;
+  }
+</style>
+  
+</head>
+<body>
+
+<!--Loading Screen Container-->
+<div class="mainLoadContainer" id="loadCont">
+   
+  <div class="loader">
+    <img src="img/avatarNew.png">
+    <div class="circlesLoad">   
+      <h2 id="mover" style="margin-left:-200px;"></h2>
+      <h2 id="mover2" style="margin-left: -100px;margin-top: -40px"></h2>
+    </div>
+    <p>
+    We are Loading...
+    </p>
+  </div>
+</div>
+
+<!-- Navbar starts here -->
+<div class="container">
+  <!-- Black transparent Overlay on top of background image -->
+  <div class = "overlay">
+    <div class="navbar" id="mynavbar">
+
+    	<!-- Navbar's Elements -->
+      <a href="index.html"><i class="fa fa-home"></i> Home </a>
+      <a href="portfolio.html"><i class ="fa fa-briefcase"></i> Portfolio</a>
+      <a href="contact.html"><i class ="fa fa-phone "></i> Contact</a>
+      <a href="cv.html"><i class = "fa fa-file-text"></i> CV</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+    <!-- The circle image and text Container -->
+    <div class= "imgContainer">
+      <img src= "img/avatar.jpg" id = "myPic">
+    	<div id="text1" class = "imgtxt">Hi, I'm <font color ="#369CEF">Pratik</font></div>
+      <!-- Slide down icon for smooth scroll -->
+      <div class="slideDown"><a href="#aboutsec" class = "linkNull">Slide Down <br><i class="fa fa-angle-down"></i></a></div>
+    </div>
+  </div>
+</div>
+
+<!-- About me layer -->
+<div class = "aboutMeSec" id="aboutsec" style="padding-bottom: 100px;">
+  <h1 class="scrollAnimate">A lil' about me</h1>
+  <p class="normalBodyTexts scrollAnimate">
+Hello everyone, My name is Pratik Prajapati. I am a Computer Engineering student at Northampton University. My portfolio is a snapshot of what I have achieved and accomplished so far. I enjoy creating and designing the internet, and creating mobile apps. 
+I realized  I was interested in this subject not long ago. It was as if I had found a lost treasure within myself. Ever since then, I have been on a long journey to discover new elements in this field as I move forward. This portfolio is simply a electronic representation of my story as I continue on with my journey.<br><br>
+
+<h3 class="scrollAnimate">WELCOME TO MY JOURNEY</h3>
+</p>
+</div>
+
+<!-- Footer Section-->
+<!-- Upper Footer -->
+<footer>
+<div class = "footer">
+  <div class = "footerLogo"><img src = "img/logoblue.png"></div>
+  <div class="footerInfo">
+    <ul>
+      <li class="smallBlue">Links</li>
+      <li><a href="index.html" class="linkNull"><i class="fa fa-home"></i> Home </a></li>
+      <li><a href="portfolio.html" class="linkNull"><i class ="fa fa-briefcase"></i> Portfolio</a></li>
+      <li><a href="contact.html" class="linkNull"><i class ="fa fa-phone "></i> Contact</a></li>
+      <li><a href="cv.html" class="linkNull"><i class = "fa fa-file-text"></i> CV</a></li>
+    </ul>
+  </div>
+  <div class="footerInfo">
+    <ul>
+      <li class="smallBlue">Contact me</li>
+      <li><i class="fa fa-phone" ></i> +977-9813368429</li>
+      <li><i class="fa fa-envelope" ></i> pratikprajapati968@gmail.com</li>
+    </ul>
+  </div>
+</div>
+<!--Lower Footer -->
+<div class="socialMediaFooter">
+  <hr>
+  <div class="bottomFooter">
+    <ul>
+      <li>
+          <a href="https://www.facebook.com/pratik.prajapati.14268769/"><i class="fa fa-facebook fa-2x scrollRotate"></i></a>
+      </li>
+      <li>
+          <a href="https://www.twitter.com"><i class = "fa fa-twitter fa-2x scrollRotate"></i></a>
+      </li>
+      <li>
+          <a href = "https://www.gmail.com"><i class = " fa fa-envelope-o fa-2x scrollRotate"></i></a>
+      </li>
+      <li>
+        <a href = "https://www.instagram.com"><i class="fa fa-instagram fa-2x scrollRotate"></i></a>
+      </li>
+    </ul>
+  </div>
+</div>
+<!-- Copyright Layer -->
+<div class="copyright">
+  2020 © Pratik Prajapti. All Rights Reserved
+</div>
+</footer>
+<script>
+  var classElements3 = document.getElementsByClassName('scrollRotate');
+var getHeight3 = classElements3[0].clientHeight;
+
+//Trigger Scroll Event
+document.addEventListener('scroll', animateOnScroll3);
+var a3=1;
+// Function to check if we have reached the element yet or not
+function checkifinView3() {
+    for (var i = 0; i < classElements.length; i++) {
+       var element3 = classElements3[i];
+       // Get total Amount of Vertical Pixels Scrolled
+        var verticalScroll3 = window.scrollY || window.pageYOffset;
+        // get total page height
+        var totalPageHeight3 = window.innerHeight;
+        
+        
+        // total scroll distance
+        var scrollPosition3 = verticalScroll3 + totalPageHeight3;
+        // Find item's position in a page
+        var itemPosition3 = element3.getBoundingClientRect().top + verticalScroll3 + getHeight3;
+        
+        // check if we have scrolled to the element
+        if (scrollPosition3 > itemPosition3) {
+    
+          return true;
+        }else{
+          if(a3>1){
+         
+            for (var i = 0; i < classElements3.length; i++) {
+              //add Animation class to given Element
+              classElements3[i].classList.remove("rotateClass");
+            }
+        
+          }
+        }
+        
+        return false;
+  }
+}
+function animateOnScroll3() {
+  
+  // Run checkifinView() function to check if we have reached the element
+  if (checkifinView3()) {
+    
+    for (var i = 0; i < classElements3.length; i++) {
+      a3=a3+1
+      //add Animation class to given Element
+      classElements3[i].classList.add("rotateClass");
+    }
+  }
+}
+</script>
+<script>
+  //circle rotation in circular path animation --Loading Scren
+  //variable ix defines sin angle which increase gradually
+  var ix=0.1;
+  //Defining two circles
+  var ax = document.getElementById("mover");
+  var bx = document.getElementById("mover2");
+  //Recursive function to translate the circles in circular path
+  function translate(){
+    //Equation for moving circle in circular path
+    ax.style.transform = "translate("+Math.cos(ix*(Math.PI/100))*100+"px,"+Math.sin(ix*(Math.PI/100))*100+"px)";
+    //Equation for moving circle in reverse circular path
+    bx.style.transform = "translate("+Math.cos(-ix*(Math.PI/100))*100+"px,"+Math.sin(-ix*(Math.PI/100))*100+"px)";
+    //incresing sine angle variable gradually for a gradual change
+    ix=ix+1.2;
+    //Function Recursion
+    setTimeout(translate,0);
+  }
+  //call translate once 
+  translate();
+  
+  //set 5000 ms delay before loading screen swipes up out of screen
+  setTimeout(function() { 
+    document.getElementById("loadCont").style.marginTop ="-250%";
+  }, 5000);
+
+  //set 7000ms delay before loading screen permanently disappears out of screen
+  setTimeout(function() { 
+    document.getElementById("loadCont").style.display ="none";
+  }, 7000);
+</script>
+
+<script>
+//Script to Animate When Element comes in View
+var a=1;
+var classElements = document.getElementsByClassName('scrollAnimate');
+var getHeight = classElements[0].clientHeight;
+
+//Trigger Scroll Event
+document.addEventListener('scroll', animateOnScroll);
+
+// Function to check if we have reached the element yet or not
+function checkifinView() {
+    for (var i = 0; i < classElements.length; i++) {
+       var element = classElements[i];
+       // Get total Amount of Vertical Pixels Scrolled
+        var verticalScroll = window.scrollY || window.pageYOffset;
+
+        // get total page height
+        var totalPageHeight = window.innerHeight;
+        
+        
+        // total scroll distance
+        var scrollPosition = verticalScroll + totalPageHeight;
+        // Find item's position in a page
+        var itemPosition = element.getBoundingClientRect().top + verticalScroll + getHeight;
+        
+        // check if we have scrolled to the element
+        if (scrollPosition > itemPosition) {
+    
+          return true;
+        }else{
+          if(a>1){
+            for (var k = 0; k < classElements.length; k++) {
+              classElements[k].classList.remove('slowFadeIn');
+            }  
+          }
+        }
+        
+        return false;
+  }
+}
+
+// function to animate if element is in view
+function animateOnScroll() {
+  
+  // Run checkifinView() function to check if we have reached the element
+  if (checkifinView()) {
+    for (var i = 0; i < classElements.length; i++) {
+      a=a+1;
+      //add Animation class to given Element
+      classElements[i].classList.add('slowFadeIn');
+    }
+  }
+}
+
+</script>
+
+<script>
+// Function to open and close navbar in mobile device
+
+function myFunction() {
+
+  var x = document.getElementById("mynavbar");
+  if (x.className === "navbar") {
+    x.className += " responsive";
+  } else {
+    x.className = "navbar";
+  }
+}
+</script>
+
+</body>
+</html>

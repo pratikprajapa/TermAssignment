@@ -1,0 +1,328 @@
+<html>
+<!--
+  Website Designed and created by Pratik Prajapati
+  web-APIs used: Google Fonts, Fonts Awesome
+  Online resource used: Avatar, Background Image: Google Images (images.google.com)
+
+
+  -->
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/font-awesome.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Maven+Pro">
+<style>
+  body{
+    font-family: Maven Pro;
+
+  }
+  .container{
+    background-image: url("img/portback.png");
+
+  }
+  /*Fixing the unknown whitespace at bottom of page */
+  html{
+    background: #ffffff;
+  }
+  .mainPortfolio  {
+      padding-bottom:  30px;
+    background: #ffffff;
+  }
+  .container_div{
+    padding-top: 30px;
+    background: #ffffff;
+    width: 100%;
+  }
+  .container_div h1{
+    text-align: center;
+    margin-top: 30px;
+    margin-top:0px;
+    margin-bottom: 0px;
+  }
+
+</style>
+</head>
+<body>
+<!-- Navbar starts here -->
+<div class="container">
+  <!-- Black transparent Overlay on top of background image -->
+  <div class = "overlay">
+    <div class="navbar" id="mynavbar">
+
+    	<!-- Navbar's Elements -->
+      <a href="index.html"><i class="fa fa-home"></i> Home </a>
+      <a href="portfolio.html"><i class ="fa fa-briefcase"></i> Portfolio</a>
+      <a href="contact.html"><i class ="fa fa-phone "></i> Contact</a>
+      <a href="cv.html"><i class = "fa fa-file-text"></i> CV</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+    <!-- The circle image and text Container -->
+    <div class= "imgContainer">
+      <img src= "img/coderguy.png" id = "myPic">
+    	<div id="text1" class = "imgtxt">Hey, Check my <font color ="#369CEF">Portfolio</font></div>
+      <!-- The slide down icon for Smooth Scroll. -->
+      <div class="slideDown"><a href="#porto" class = "linkNull">Slide Down <br><i class="fa fa-angle-down"></i></a></div>
+    </div>
+  </div>
+</div>
+<!-- Portfolio Section -->
+<div class="container_div">
+<h1 class="blueHeading scrollAnimate"  id="porto">My Portfolio</h1>
+</div>
+<div class = "mainPortfolio scrollAnimate">
+  <!-- A 3*3 Grid. Adding project picture and description -->
+  <div class = "gridElement" style="background-image: url('img/1.jpg');" onclick="imgPopOpen(1);">
+    <div class="overlayVis">
+      <h3 class="blueHeading">Nepal Bazar</h3>
+      Platform: Android<br>
+      Nepal Bazar is a buy and sale (E-commerce) app.<br>
+      Created using Java, PHP, SQL, XML
+    </div>
+  </div>
+  <div class = "gridElement" style="background-image: url('img/2.jpg');" onclick="imgPopOpen(2);">
+     <div class="overlayVis">
+      <h3 class="blueHeading">Mero Biruwa</h3>
+      Platform: Android<br>
+      Mero Biruwa is a platform for farmers to buy and sell farming goods.<br>
+      Created using Java, PHP, SQL, XML
+    </div>
+  </div>
+  <div class = "gridElement" style="background-image: url('img/3.jpg');" onclick="imgPopOpen(3);">
+     <div class="overlayVis">
+      <h3 class="blueHeading">Tech.io</h3>
+      Platform: Web<br>
+      Tech.io is a site to buy electronic products.<br>
+      Created using Bootstrap 4, CSS, HTML
+    </div>
+  </div>
+ 
+</div>
+<div class="imgPopup" id="popUp3">
+  <h1 class="rightAlign"  onclick="imgPopClose();"><i class="fa fa-close"></i></h1>
+  <h2 id="popupTitle"></h2>
+  <img src="img/3.jpg"   id="mainPop"><br>
+  <p id="popupContent">
+  
+  </p>
+</div>
+
+<!-- Footer Section -->
+<!-- Upper Footer -->
+<footer>
+<div class = "footer">
+  <div class = "footerLogo"><img src = "img/logoblue.png"></div>
+  <div class="footerInfo">
+    <ul>
+      <li class="smallBlue">Links</li>
+      <li><a href="index.html" class="linkNull"><i class="fa fa-home"></i> Home </a></li>
+      <li><a href="portfolio.html" class="linkNull"><i class ="fa fa-briefcase"></i> Portfolio</a></li>
+      <li><a href="contact.html" class="linkNull"><i class ="fa fa-phone "></i> Contact</a></li>
+      <li><a href="cv.html" class="linkNull"><i class = "fa fa-file-text"></i> CV</a></li>
+    </ul>
+  </div>
+  <div class="footerInfo">
+    <ul>
+      <li class="smallBlue">Contact me</li>
+      <li><i class="fa fa-phone"></i> +977-9813368429</li>
+      <li><i class="fa fa-envelope"></i> pratikprajapati@gmail.com</li>
+    </ul>
+  </div>
+</div>
+<!-- Lower Footer -->
+<div class="socialMediaFooter">
+  <hr>
+  <div class="bottomFooter">
+    <ul>
+      <li>
+          <a href="https://www.facebook.com/pratik.prajapati.14268769/"><i class="fa fa-facebook fa-2x scrollRotate"></i></a>
+      </li>
+      <li>
+          <a href="https://www.twitter.com"><i class = "fa fa-twitter fa-2x scrollRotate"></i></a>
+      </li>
+      <li>
+          <a href = "https://www.gmail.com"><i class = " fa fa-envelope-o fa-2x scrollRotate"></i></a>
+      </li>
+      <li>
+        <a href = "https://www.instagram.com"><i class="fa fa-instagram fa-2x scrollRotate"></i></a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!--Copyright Layer -->
+<div class="copyright">
+  2020 © Pratik Prajapti. All Rights Reserved
+</div>
+
+
+</footer>
+<script>
+  var classElements3 = document.getElementsByClassName('scrollRotate');
+var getHeight3 = classElements3[0].clientHeight;
+
+//Trigger Scroll Event
+document.addEventListener('scroll', animateOnScroll3);
+var a3=1;
+// Function to check if we have reached the element yet or not
+function checkifinView3() {
+    for (var i = 0; i < classElements.length; i++) {
+       var element3 = classElements3[i];
+       // Get total Amount of Vertical Pixels Scrolled
+        var verticalScroll3 = window.scrollY || window.pageYOffset;
+        // get total page height
+        var totalPageHeight3 = window.innerHeight;
+        
+        
+        // total scroll distance
+        var scrollPosition3 = verticalScroll3 + totalPageHeight3;
+        // Find item's position in a page
+        var itemPosition3 = element3.getBoundingClientRect().top + verticalScroll3 + getHeight3;
+        
+        // check if we have scrolled to the element
+        if (scrollPosition3 > itemPosition3) {
+    
+          return true;
+        }else{
+          if(a3>1){
+         
+            for (var i = 0; i < classElements3.length; i++) {
+              //add Animation class to given Element
+              classElements3[i].classList.remove("rotateClass");
+            }
+        
+          }
+        }
+        
+        return false;
+  }
+}
+function animateOnScroll3() {
+  
+  // Run checkifinView() function to check if we have reached the element
+  if (checkifinView3()) {
+    
+    for (var i = 0; i < classElements3.length; i++) {
+      a3=a3+1
+      //add Animation class to given Element
+      classElements3[i].classList.add("rotateClass");
+    }
+  }
+}
+</script>
+<script>
+  // This script is only for the image in Basic Info Section
+var classElements = document.getElementsByClassName('scrollAnimate');
+var getHeight = classElements[0].clientHeight;
+
+//Trigger Scroll Event
+document.addEventListener('scroll', animateOnScroll);
+var a2=1;
+// Function to check if we have reached the element yet or not
+function checkifinView() {
+    for (var i = 0; i < classElements.length; i++) {
+       var element = classElements[i];
+       // Get total Amount of Vertical Pixels Scrolled
+        var verticalScroll = window.scrollY || window.pageYOffset;
+        j = i;
+        // get total page height
+        var totalPageHeight = window.innerHeight;
+        
+        
+        // total scroll distance
+        var scrollPosition = verticalScroll + totalPageHeight;
+        // Find item's position in a page
+        var itemPosition = element.getBoundingClientRect().top + verticalScroll + getHeight;
+        
+        // check if we have scrolled to the element
+        if (scrollPosition > itemPosition) {
+    
+          return true;
+        }else{
+          if(a2>1){
+         
+            for (var i = 0; i < classElements.length; i++) {
+              //add Animation class to given Element
+              classElements[i].classList.remove("slowFadeIn");
+            }
+        
+          }
+        }
+        
+        return false;
+  }
+}
+function animateOnScroll() {
+  
+  // Run checkifinView() function to check if we have reached the element
+  if (checkifinView()) {
+    
+    for (var i = 0; i < classElements.length; i++) {
+      a2=a2+1
+      //add Animation class to given Element
+      classElements[i].classList.add("slowFadeIn");
+    }
+  }
+}
+</script>
+
+<script>
+
+//Function to open and close navbar in mobile device -->
+function myFunction() {
+ 
+  var x = document.getElementById("mynavbar");
+  if (x.className === "navbar") {
+    x.className += " responsive";
+  } else {
+    x.className = "navbar";
+  }
+}
+
+//PopUp Contents
+
+//Content on 1st element
+var titl1="Nepal Bazar";
+var cont1 = "Platform: Android<br><br>Nepal Bazar is a buy and sale (E-commerce) app. It is an alternative to Hamrobazar where people can buy and sell 2nd hand products without third party i.e App Provider's interference<br><br>Created using Java, PHP, SQL, XML";
+var titl2 = "Mero Biruwa";
+//Content on 2nd Element
+var cont2 =" Platform: Android<br><br>Mero Biruwa is a platform for farmers to buy and sell farming goods. It also contains a weather section which updates on every launch which provides user mainly farmers present weather and future forecast enabling them to make plans for future. Along with that, it can also be hooked up with a BOT for auto farming.<br><br>Created using Java, PHP, SQL, XML";
+//Content on 3rd Element
+var cont3=" Platform: Web<br><br>Tech.io is a site to buy electronic products. It contains numerous sections such as an online store where you can find all the elctronic products. The site contains categorical listing of products making user easier to find what they are looking for<br><br>Created using Bootstrap 4, CSS, HTML";
+var titl3 = "Tech.io";
+
+//Defining Different Contents of Popup for making changes as per item selected
+var imgPop = document.getElementById("mainPop");
+var paragraph = document.getElementById("popupContent");
+var title = document.getElementById("popupTitle");
+
+//Function to Open the PopUp
+function imgPopOpen(x){
+  var popUpContainer=document.getElementById("popUp3");
+  imgPop.src = "img/"+x+".jpg";
+  if(x==1){//Check iff clicked on 1st element
+    paragraph.innerHTML =cont1;
+    title.innerHTML = titl1;
+  }
+  if(x==2){//check if clicked on 2nd element
+    paragraph.innerHTML =cont2;
+    title.innerHTML = titl2;
+  }
+  if(x==3){//check if clicked on 3rd element
+    paragraph.innerHTML =cont3;
+    title.innerHTML = titl3;
+  }
+  popUpContainer.style.display = "block";//make the layer appear
+
+}
+
+//Function to close the popup
+function imgPopClose(){
+  var popUpContainer=document.getElementById("popUp3");
+  popUpContainer.style.display = "none";//hide the popup layer 
+}
+</script>
+
+</body>
+</html>

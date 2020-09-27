@@ -1,0 +1,319 @@
+<html>
+<!--
+  Website Designed and created by Pratik Prajapati
+  web-APIs used: Google Fonts, Fonts Awesome
+  Online resource used: Avatar, Background (Google Images)
+  -->
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/font-awesome.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Maven+Pro">
+<style>
+  body{
+    font-family: Maven Pro;
+  }
+  .container{
+    background-image: url("img/forestback.jpg");
+  }
+  /*fixing the unknown Whitespace at bottom of page */
+  html{
+    background: #000000;
+  }
+  .form_container{
+    background: #ffffff;
+  }
+</style>
+</head>
+<body>
+<!-- Navbar starts here -->
+<div class="container">
+  <!-- Black transparent Overlay on top of background image -->
+  <div class = "overlay">
+    <div class="navbar" id="mynavbar">
+
+      <!-- Navbar's Elements -->
+      <a href="index.html"><i class="fa fa-home"></i> Home </a>
+      <a href="portfolio.html"><i class ="fa fa-briefcase"></i> Portfolio</a>
+      <a href="contact.html"><i class ="fa fa-phone "></i> Contact</a>
+      <a href="cv.html"><i class = "fa fa-file-text"></i> CV</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+    <!-- The circle image and text Container. Social Media icons in a linear form -->
+    <div class= "imgContainer">
+      <img src= "img/avatar2.jpg" id = "myPicContact">
+      <div id="textContact" class = "imgtxt"><font color ="#369CEF">Hey</font>, Wanna get in touch with me?</div>
+      <div class="socialMedia">
+        <ul>
+          <li>
+            <a href="https://www.facebook.com/pratik.prajapati.14268769/"><i class="fa fa-facebook fa-2x"></i></a>
+          </li>
+          <li>
+            <a href="https://www.twitter.com"><i class = "fa fa-twitter fa-2x"></i></a>
+          </li>
+          <li>
+            <a href = "https://www.gmail.com"><i class = " fa fa-envelope-o fa-2x"></i></a>
+          </li>
+          <li>
+            <a href = "https://www.instagram.com"><i class="fa fa-instagram fa-2x"></i></a>
+          </li>
+        </ul>
+      </div>
+      <center><h1 style="color: #369CEF;margin-bottom:30px;" id="or">Or</h1></center>
+      <!-- The Slide Down Icon for smooth scroll-->
+        <div class="slideDown"><a href="#fback" class = "linkNull">Slide Down <br><i class="fa fa-angle-down"></i></a></div>
+    </div>
+  </div>
+</div>
+
+<div class = "form_container " id ="fback">
+  <h1 class="blueHeading scrollAnimate" style="margin-top: 0px;padding-top: 30px;">Leave me a message</h1>
+  <form action="#null" id="feedbackForm" >
+    <label for="name"class="scrollAnimate">Your name?</label><br>
+    <input type = "text" id="name" hint ="username" placeholder = "John" maxlength="50" class="scrollAnimate"><br>
+     <label for="email" class="scrollAnimate">Your email?</label><br>
+    <input type = "email" id = "email" placeholder = "abc@gmail.com" class="scrollAnimate"><br>
+    <textarea placeholder="Your message?" maxlength="250" class="scrollAnimate"></textarea><br>
+    <input type = "button" value ="Send Message" onclick="sendFeedback()" class="scrollAnimate">
+  </form>
+
+</div>
+<div class = "form_container" id ="fback2">
+  <h1 class="blueHeading scrollAnimate" style="margin-top: 0px;padding-top: 30px;">Want me to do some Projects?</h1>
+  <form action="#null" id="feedbackForm2">
+    <label for="name" class="scrollAnimate">Project Name?</label><br>
+    <input type = "text" id="name" hint ="username" placeholder = "Project Alpha" maxlength="50" class="scrollAnimate"><br>
+     <label class="scrollAnimate">Platform?</label><br>
+      <select class="scrollAnimate">
+        <option>Android</option>
+        <option>Web</option>
+        <option>IOS</option>
+        <option>Windows</option>
+      </select>
+    <br>
+    <textarea placeholder="Project description?" maxlength="250" class="scrollAnimate"></textarea><br>
+    <input type = "button" value ="Next" class="scrollAnimate" onclick="sendProject()">
+  </form>
+
+</div>
+
+<div class="alertPopup" id="popUp3">
+	<div class="container">
+  		<h3><i class="fa fa-close" onclick="popClose()"></i></h3>
+  		<h2 id="popupTitle">Your Message Has been sent. We'll get back to you soon</h2>
+	</div>  
+  </p>
+</div>
+<!-- Footer Section-->
+<!-- UpperFooter -->
+<footer>
+<div class = "footer">
+  <div class = "footerLogo"><img src = "img/logoblue.png"></div>
+  <div class="footerInfo">
+    <ul>
+      <li class="smallBlue">Links</li>
+      <li><a href="index.html" class="linkNull"><i class="fa fa-home"></i> Home </a></li>
+      <li><a href="portfolio.html" class="linkNull"><i class ="fa fa-briefcase"></i> Portfolio</a></li>
+      <li><a href="contact.html" class="linkNull"><i class ="fa fa-phone "></i> Contact</a></li>
+      <li><a href="cv.html" class="linkNull"><i class = "fa fa-file-text"></i> CV</a></li>
+    </ul>
+  </div>
+  <div class="footerInfo">
+    <ul>
+      <li class="smallBlue">Contact me</li>
+      <li><i class="fa fa-phone"></i> +9779813368429</li>
+      <li><i class="fa fa-envelope"></i> pratikprajapati968@gmail.com</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Lower Footer -->
+<div class="socialMediaFooter">
+  <hr>
+  <div class="bottomFooter">
+    <ul class="scrollAnimate">
+      <li>
+          <a href="https://www.facebook.com/pratik.prajapati.14268769/"><i class="fa fa-facebook fa-2x scrollRotate"></i></a>
+      </li>
+      <li>
+          <a href="https://www.twitter.com"><i class = "fa fa-twitter fa-2x scrollRotate"></i></a>
+      </li>
+      <li>
+          <a href = "https://www.gmail.com"><i class = " fa fa-envelope-o fa-2x scrollRotate"></i></a>
+      </li>
+      <li>
+        <a href = "https://www.instagram.com"><i class="fa fa-instagram fa-2x scrollRotate"></i></a>
+      </li>
+    </ul>
+  </div>
+</div>
+<!--Copyright Layer -->
+<div class="copyright">
+  2020 © Pratik Prajapti. All Rights Reserved
+</div>
+
+
+</footer>
+<script>
+  var classElements3 = document.getElementsByClassName('scrollRotate');
+var getHeight3 = classElements3[0].clientHeight;
+
+//Trigger Scroll Event
+document.addEventListener('scroll', animateOnScroll3);
+var a3=1;
+// Function to check if we have reached the element yet or not
+function checkifinView3() {
+    for (var i = 0; i < classElements.length; i++) {
+       var element3 = classElements3[i];
+       // Get total Amount of Vertical Pixels Scrolled
+        var verticalScroll3 = window.scrollY || window.pageYOffset;
+        // get total page height
+        var totalPageHeight3 = window.innerHeight;
+        
+        
+        // total scroll distance
+        var scrollPosition3 = verticalScroll3 + totalPageHeight3;
+        // Find item's position in a page
+        var itemPosition3 = element3.getBoundingClientRect().top + verticalScroll3 + getHeight3;
+        
+        // check if we have scrolled to the element
+        if (scrollPosition3 > itemPosition3) {
+    
+          return true;
+        }else{
+          if(a3>1){
+         
+            for (var i = 0; i < classElements3.length; i++) {
+              //add Animation class to given Element
+              classElements3[i].classList.remove("rotateClass");
+            }
+        
+          }
+        }
+        
+        return false;
+  }
+}
+function animateOnScroll3() {
+  
+  // Run checkifinView() function to check if we have reached the element
+  if (checkifinView3()) {
+    
+    for (var i = 0; i < classElements3.length; i++) {
+      a3=a3+1
+      //add Animation class to given Element
+      classElements3[i].classList.add("rotateClass");
+    }
+  }
+}
+</script>
+<script>
+  // This script is only for the image in Basic Info Section
+var classElements = document.getElementsByClassName('scrollAnimate');
+var getHeight = classElements[0].clientHeight;
+
+//Trigger Scroll Event
+document.addEventListener('scroll', animateOnScroll);
+var a2=1;
+// Function to check if we have reached the element yet or not
+function checkifinView() {
+    for (var i = 0; i < classElements.length; i++) {
+       var element = classElements[i];
+       // Get total Amount of Vertical Pixels Scrolled
+        var verticalScroll = window.scrollY || window.pageYOffset;
+        j = i;
+        // get total page height
+        var totalPageHeight = window.innerHeight;
+        
+        
+        // total scroll distance
+        var scrollPosition = verticalScroll + totalPageHeight;
+        // Find item's position in a page
+        var itemPosition = element.getBoundingClientRect().top + verticalScroll + getHeight;
+        
+        // check if we have scrolled to the element
+        if (scrollPosition > itemPosition) {
+    
+          return true;
+        }else{
+          if(a2>1){
+         
+            for (var i = 0; i < classElements.length; i++) {
+              //add Animation class to given Element
+              classElements[i].classList.remove("slowFadeIn");
+            }
+        
+          }
+        }
+        
+        return false;
+  }
+}
+function animateOnScroll() {
+  
+  // Run checkifinView() function to check if we have reached the element
+  if (checkifinView()) {
+    
+    for (var i = 0; i < classElements.length; i++) {
+      a2=a2+1
+      //add Animation class to given Element
+      classElements[i].classList.add("slowFadeIn");
+    }
+  }
+}
+</script>
+<script>
+ var popUpContainer=document.getElementById("popUp3");
+
+ //function to close popup
+function popClose(){
+	popUpContainer.style.display = "none";
+}
+//Function on click project request button
+function sendProject(){
+  document.getElementById("feedbackForm2").reset()
+  document.getElementById("fback").style.display = "block";
+  document.getElementById("fback2").style.display = "none";
+}
+//function to send a popup while clicking send message.
+function sendFeedback(){
+	if(checkMailValidity(document.getElementById('email').value)){
+  		popUpContainer.style.display = "block";
+  		document.getElementById("feedbackForm").reset();
+      document.getElementById("fback2").style.display = "block";
+      document.getElementById("fback").style.display = "none";
+	}else{
+		console.log("Nope")
+	}
+}
+//Check Email Validity
+function checkMailValidity(mail) 
+{
+	console.log(mail);
+	//Defining a RegEx to test whether the email is valid or not
+ if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(mail))
+  {
+    return (true);
+  }
+    alert("Invalid Email")
+    return (false);
+
+}
+//
+
+//Function to open and close navbar in mobile device
+function myFunction() {
+
+  var x = document.getElementById("mynavbar");
+  if (x.className === "navbar") {
+    x.className += " responsive";
+  } else {
+    x.className = "navbar";
+  }
+}
+</script>
+
+</body>
+</html>

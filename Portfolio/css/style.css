@@ -1,0 +1,957 @@
+/* ----------------------HERE COMES THE CSS-------------------- */
+
+/*
+
+  Project Created By Pratik Prajapati 
+
+*/
+
+
+
+/* Defining Animation Keyframes */
+
+@keyframes smoothEnter{
+  0%{
+    opacity: 0%;
+  }
+  100%{
+    opacity: 100%;
+  }
+}
+
+@keyframes textTransition {
+  0% {
+    transform: translateY(20px);
+    opacity: 0%;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 100%;
+  }
+}
+
+@keyframes imageTransition {
+  0% {
+    border-radius: 20%;
+    border-width: 0px;
+    border-color:  #ffffff;
+  }
+  100% {
+   border-radius: 50%;
+    border-width: 5px;
+   border-color:  #369CEF;
+  }
+
+}
+
+@keyframes imageTransitionSmall {
+  0% {
+    border-radius: 20%;
+    border-width: 0px;
+    border-color:  #ffffff;
+    width:40vh;
+    margin-left:37vw;
+    height:40vh;
+  }
+  100% {
+   border-radius: 50%;
+    border-width: 5px;
+   border-color:  #369CEF;
+     width:10vh;
+  margin-left:45vw;
+  height:10vh;
+  }
+
+}
+@keyframes textColorFadeIn {
+  0% {
+    color:  #ffffff;
+  }
+  100% {
+   color:  #369CEF;
+  }
+}
+
+@keyframes sliderAnimation{
+ 0% {
+    transform: translateY(-10px);
+    opacity: 0%;
+  }
+  50% {
+    transform: translateX(0px);
+    opacity: 100%;
+  }
+  100%{
+     transform: translateY(-10px);
+     opacity: 0%;
+  }
+}
+body {
+  margin: 0;
+  /*font-family: Arial, Helvetica, sans-serif;*/
+}
+
+html{
+  scroll-behavior: smooth;
+}
+/* Styling the h2 tag to create circular shape*/
+  .loader h2{
+
+    width: 20px;
+    height: 20px;
+    background: #000000;
+    border-radius: 50%;
+    animation:  colors 3s infinite;
+  }
+    .loader img{
+    width: 300px;
+    height: auto;
+    margin-bottom: 180px;
+    
+  }
+  /*Style the circle in same line*/
+  .circlesLoad{
+    display: inline-block;
+  }
+  /* circles background changing Animation*/
+  @keyframes colors {
+    0%{
+      background: #24B9FF;
+    }
+    50%{
+      background: #ED424A;
+    }
+    100%{
+      background:#24B9FF;
+    }
+  }
+  /*Font color changing animation*/
+  @keyframes fcolors {
+    0%{
+      color: #24B9FF;
+    }
+    50%{
+      color: #746764;
+    }
+    100%{
+      color:#24B9FF;
+    }
+  }
+  /*Loading Screen Background changing Animation*/
+  @keyframes colors2{
+      0%{
+      background: #000000;
+    }
+    50%{
+      background:#3D373D;
+    }
+    100%{
+      background:#000000;
+    }
+
+  }
+/*styling main loading container*/
+   .mainLoadContainer{
+    z-index: 10000;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    transition: 1s;
+    animation: colors2 5s infinite;
+  }
+  .loader{
+    margin-top:5%;
+    margin-left: 0%;
+    text-align: center;
+    width: 100%;
+    
+    
+/*Adding Text color change animation*/    
+  }
+  .loader p{
+    padding-top:60px;
+    
+    animation: fcolors 3s infinite;
+  }
+
+.container {
+  width: 100%;
+  height: 110vh;
+  background-image: url("../img/mountain_back.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: auto;
+}
+
+/* Adding a black transparent color on overlay*/
+.overlay{
+  width: 100%;
+  height:100%;
+  background-color: rgba(0,0,0,0.5);
+}
+
+/* Defining Navbar Properties */
+.navbar {
+  margin-left:35%;
+  padding: 10px;
+
+  transition: 1s;
+}
+
+/* defining Navbar Elements properties */
+.navbar a {
+  color: #ffffff;
+  display: block;
+  text-align: center;
+  padding: 14px;
+  font-size: 17px;
+  text-decoration: none;
+  float: left;
+  transition: 0.5s;
+
+}
+/* Hover effect on Navbar Elements */
+.navbar a:hover {
+  background-color:#369CEF;
+}
+
+/* Icon on navbar to expand and close navbar */
+.navbar .icon {
+  display: none;
+
+  
+}
+/* The element of navbar i.e the page we are in. Adding some  */
+.navbar a.active {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/* Converting square pic into circular form and adding some border and animations*/
+#mypic{
+  border: 5px dashed #369CEF;
+  padding:10px;
+
+  border-radius: 50%;
+  width:40vh;
+  margin-left:37vw;
+  height:40vh;
+  margin-top: 20vh;
+  animation: 1s ease-out 0s 1 imageTransition;
+
+
+}
+
+.imgtxt{
+  margin-top: 0vh;
+  color: #ffffff;
+  font-size: 80px;
+  text-align: center;
+  font-family: Consolas;
+  padding:30px;
+}
+/*Smooth Transition for texts: y position translation and opacity increase*/
+#text1{
+  animation: 1s ease-out 0s 1 textTransition;
+}
+#text1 font{
+  animation: 1.5s ease-out 0s 1 textColorFadeIn;
+}
+
+/* Adding a slide down animation to the Slide Down button*/
+.slidedown{
+  font-size: 15px;
+  text-align: center;
+  color: #ffffff;
+   animation: 1s ease-out 0s infinite sliderAnimation;
+}
+
+/*About Me Section of Home Page */
+
+.aboutMeSec {
+  margin: 0px 0px 50px 0px;
+  text-align: center;
+  padding:100px 50px 50px 50px;
+  background: #ffffff;
+}
+
+.aboutMeSec h1{
+  color: #369CEF;
+}
+.aboutMeSec p{
+  padding:0px 200px 0px 200px;
+}
+
+/*Footer Properties */
+.footer{
+  padding: 60px 0px 40px 0px!important;
+  font-size:13px;
+   display: grid;
+   grid-template-columns: auto auto auto;
+   width: 100%;
+   padding: 0px;
+   padding-top:5px;
+   margin:0px;
+   background-color: #000000;
+   color:#ffffff;
+}
+
+@keyframes rotateAnim {
+   0%{
+    transform: rotate(0deg);
+   }
+     100%{
+    transform: rotate(360deg);
+   }
+}
+.rotateClass {
+
+  animation: rotateAnim 1.4s;
+}
+/*Moving the footer logo to centralize it's position*/
+.footerLogo{
+  padding-left: 30%;
+}
+.footerLogo img{
+  width: 170px;
+  height:auto;
+  margin:0px;
+}
+.footerInfo{
+ 
+}
+/*Removing list dots */
+.footer ul{
+  list-style: none;
+}
+.smallBlue{
+  font-size: 15px;
+  color: #369CEF;
+}
+/*ugh font awesome icon!! Need to change that colour of icons on footer*/
+.footer .fa{
+  color: #369CEF !important;
+}
+.bottomFooter li:hover{
+  background:#369CEF;
+  
+}
+.bottomFooter li:hover  .fa{
+  color:#ffffff!important;
+  transform:  rotate(360deg);
+  transition: 0.5s;
+
+}
+/* Lower Footer Properties */
+.socialMediaFooter{
+  background: #000000;
+}
+.socialMediaFooter ul{
+  list-style: none;
+  text-align: center;
+  padding: 0px;
+  margin:0px;
+  transition: 1s;
+}
+.socialMediaFooter li{
+  display:inline-block;
+  background: rgba(255,255,255,1);
+  padding:10px;
+  border-radius: 50%;
+  width:20px;
+  margin: 10px 5px;
+  height:20px;
+  text-align: center;
+  transition: 1s;
+  font-size: 10px;
+}
+
+.socialMediaFooter hr{
+  border-color: #ffffff;
+  border:1px solid #ffffff;
+  width: 80%;
+  margin-top: 0px;
+}
+/*Styling the copyright Bar*/
+.copyright{
+  color: #ffffff;
+  width: 100%;
+  font-size: 10px;
+  padding:5px 0px;
+  text-align: center;
+  background: #202021;
+}
+/* Adapting web elements for small width devices or screen  */
+
+@media screen and (max-width: 640px) {
+  .navbar a:not(:first-child) {
+    display: none;
+  }
+  .navbar a.icon {
+    float: right;
+    display: block;
+
+  }
+}
+/*Adapting Elements for Tablet */
+@media screen and (max-width: 1020px){
+  #mypic{
+    margin-left: 20vw;
+  }
+  .aboutMeSec p{
+    padding:0px ;
+  }
+  .navbar{
+    margin-left:20%;
+  }
+}
+
+@media(max-width: 376px) and  (min-width: 370px) and (max-height: 813px) and (min-height: 810px){
+  #mypic{
+    margin-left: 3vw!important;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  /*Navbar Needs to be Responsive*/
+  .navbar.responsive .icon {
+   
+  }
+  .navbar.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+    transition: 1s;
+  }
+
+
+.navbar {
+
+  margin-left:0%;
+  padding: 0px;
+  
+  }
+  .navbar a.active {
+    background-color: #ffffff;
+    color: #000000;
+  }
+  #text1{
+    font-size: 30px;
+  }
+
+  #mypic{
+    margin-left: 15vw;
+  }
+
+  .aboutMeSec p{
+    padding:0px 20px 0px 20px;
+  }
+  .footer{
+     
+     grid-template-columns: auto;
+
+     
+  }
+
+  .footerLogo{
+    padding-left: 20%;
+
+  }
+  .footerLogo img{
+    width: 100px;
+    height: auto;
+  }
+  .footerInfo{
+    padding-left: 15%;
+  }
+  .socialMediaFooter li{
+    height: 15px;
+    width:15px;
+    font-size: 8px !important;
+  }
+  .footer{
+    font-size: 10px;
+  }
+  .smallBlue{
+    font-size: 15px;
+  }
+}
+@keyframes PopinFadein {
+    from {opacity: 0; transform: scale(.1,.1)}
+    to {opacity: 1;}
+}
+.slowFadeIn {
+  animation: PopinFadein 1.4s;
+}
+.imageAnim{
+  animation: imageTransition 1s;
+}
+
+/* ---------------------------STYLES FOR CONTACT PAGE BEGINS HERE-------------------- */
+/*Making the pic circular */
+#mypicContact{
+  border: 5px dashed #369CEF;
+  padding:10px;
+  border-radius: 50%;
+  width:10vw;
+  margin-left:45vw;
+  height:10vw;
+  margin-top: 20vh;
+  animation: 1s ease-out 0s 1 imageTransition;
+}
+/* Those texts on Contact page needs some styling. */
+#textContact{
+
+  font-size: 20px;
+  animation: 1s ease-out 0s 1 textTransition;
+}
+
+#textContact font{
+  animation: 1.5s ease-out 0s 1 textColorFadeIn;
+}
+/* Removing bullets from list and converting them into inline-block. This is for that circular social media icons*/
+.socialMedia ul{
+  list-style: none;
+  text-align: center;
+  padding: 0px;
+  transition: 1s;
+}
+.socialMedia li{
+  display:inline-block;
+  background: rgba(255,255,255,0.5);
+  padding:10px;
+  border-radius: 50%;
+  width:30px;
+  margin: 10px 5px;
+  height:30px;
+  text-align: center;
+  transition: 1s;
+}
+/*Hover Effect on List Icons*/
+.socialMedia li:hover{
+  background: rgba(255,255,255,1);
+}
+
+.socialMedia a{
+  text-decoration: none;
+}
+/* Hyperlinks - Removing Hyperlink color i.e redish blue colour */
+.linkNull{
+  text-decoration: none;
+}
+.linkNull:hover {
+   color: #ffffff;
+}
+.linkNull:visited {
+   color: #ffffff;
+}
+.linkNull:link {
+   color: #ffffff;
+}
+.linkNull:active {
+  color: #ffffff;
+}
+
+.socialmedia a,:hover,.socialMediaFooter a {
+  color: #008DFF;
+}
+.socialmedia a:visited,.socialMediaFooter a {
+  color: #008DFF;
+}
+.socialmedia a:link,.socialMediaFooter a {
+  color: #008DFF;
+}
+.socialmedia a:active,.socialMediaFooter a {
+  color: #008DFF;
+}
+/*Adapting viewport for tablets*/
+@media screen and (max-width: 1020px) {
+  #or{
+    padding: 50px 0px;
+  }
+}
+/* Adapting Contact Page Elements for mobile devices or small screen device */
+
+@media screen and (max-width: 640px) {
+  #textContact{
+    font-size: 15px;
+  }
+
+  #mypicContact{
+    margin-left: 15vw;
+  }
+  .socialMedia ul{
+    
+   
+  }
+
+}
+/* --------------------------Styles for CV Page Starts here----------------------- */
+/*Circular Pic */
+#selfPic{
+  border: 5px dashed #369CEF;
+  padding:10px;
+  border-radius: 50%;
+  width:10vw;
+  margin-left:45vw;
+  height:10vw;
+  margin-top: 15vh;
+  animation: 1s ease-out 0s 1 imageTransition;
+
+}
+/*CV Layout with basic info and pic- styling this layout*/
+.CV{
+  padding:30px 0px;
+  width: 100%;
+  display:flex;
+  justify-content: space-between;
+}
+
+/*Center aligning Contents of Basic Info section vertically*/
+.basicInfo{
+  width:50%;
+  margin-left: 10px;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Needed that blue heading badly. Wrote a CSS code for it */
+.blueheading{
+  color: #369CEF;
+}
+
+.pic{
+  width: 50%;
+}
+
+.pic img{
+  border: 5px dashed #369CEF;
+  padding:10px;
+  border-radius: 50%;
+  width:20vw;
+  height:20vw;
+
+}
+.imageAnim{
+  animation: imageTransition 1s;
+}
+/* Education Section of CV page */
+.education{
+  padding-top:30px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+/* Moving the circular pic above HR bar to create nice effect */
+.lineImage{
+  border-radius: 50%;
+  border: 2px solid;
+  height:50px;
+  width: 50px;
+  margin-left: 48%;
+  margin-top: -35px;
+}
+hr{
+  margin-top:20px;
+  width: 80%;
+  border: 1px solid;
+}
+/*Experience Section Styling */
+.workExperience{
+  padding-top:30px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+.skillSlider{
+ text-align: center;
+ padding-bottom: 30px;
+}
+/*The Progress bar used to demonstrate skill ability in ability section*/
+/*Background Layer Properties of Progress bar*/
+.bgProgress{
+  margin-left: 43%;
+  width: 200px;
+  height: 20px;
+  padding: 2px;
+  border-radius: 10px;
+  background : #000000;
+}
+/*Foreground Layer Properties of Progress Bar */
+.fgProgress{
+  border-radius: 10px;
+  border-radius:10px 0px 0px 10px;
+  width: 70%;
+  height: 20px;
+  background: #369CEF;
+}
+@keyframes banim1{
+  0%{
+    width: 0%;
+    background:#ED4F65;
+  }
+  100%{
+    width:70%;
+    background:#369CEF;
+  }
+}
+.banimclass1{
+  animation: banim1 2s;
+}
+@keyframes banim2{
+  0%{
+    width: 0%;
+    background:#ED4F65;
+  }
+  100%{
+    width:80%;
+    background:#369CEF;
+  }
+}
+.banimclass2{
+  animation: banim2 2s;
+}
+@keyframes banim3{
+  0%{
+    width: 0%;
+    background:#ED4F65;
+  }
+  100%{
+    width:30%;
+    background:#369CEF;
+  }
+}
+.banimclass3{
+  animation: banim3 2s;
+}
+/* Adapting Elements of CV page for small width devices or screen */
+@media screen and (max-width: 640px) {
+  .CV{
+    display: block;
+
+  }
+  .basicInfo{
+    margin-left: 0px;
+    width: 100%;
+  }
+  .pic{
+   
+    margin-left:40%;
+  }
+  .lineImage{
+    margin-left: 45%;
+  }
+  .bgProgress{
+  margin-left: 30%;
+  }
+}
+
+/*----------------------------Style For Portfolio Page Starts Here---------------------------- */
+
+/* Styling the portfolio div layer. Using 3*3 grid for 6 projects */
+.mainPortFolio{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  margin-bottom:30px;
+}
+/*Grid Elements smooth Rounded border */
+.gridElement{
+  margin:20px;
+  height: 300px;
+  background-size: cover;
+  border-radius: 15px;
+  border-width: 2px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  transition: 1s;
+}
+/*Adding a black transparent overlay for hover Effect. */
+.overlayVis{
+  opacity: 0%;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  color: #ffffff;
+  background: rgba(0,0,0,0.8);
+  transition: 1s;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+/* increase opacity while hovering on project */
+.gridElement:hover > .overlayVis{
+  opacity: 80%;
+  transition: 1s;
+}
+/*Adapting viewport for tablets */
+@media screen and (max-width: 1020px) {
+  .mainPortFolio{
+    padding:10px;
+    grid-template-columns: auto;
+  }
+  .gridElement{
+    height: 200px;
+  }
+}
+/* Adapting Elements of Portfolio page for small width Device */
+@media screen and (max-width: 640px) {
+  .mainPortFolio{
+    grid-template-columns: auto;
+  }
+  .gridElement{
+    height: 200px;
+  }
+}
+/*Style for Popup so that it appears above other layer and has a fixed position*/
+.imgPopup{
+  z-index: 2; 
+  position: fixed; 
+  display:none; 
+  width: 100%; 
+  height: 100%;
+  overflow: auto; 
+  background-color: rgba(1,1,1,0.9); 
+  color: #ffffff;
+  text-align:center;
+  transition: 1s;
+  left: 0;
+  top: 0;
+  animation: smoothEnter 0.5s;
+}
+/*Popup image center*/
+.imgPopup img{
+  width:40%;
+  display: block; 
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.imgPopup p{
+  padding:0px 300px;
+}
+/*Aligning close button to left*/
+.imgPopup .rightAlign{
+  text-align: right;
+  padding:20px;
+}
+.alertPopup{
+    z-index: 2; 
+  position: fixed; 
+  display:none; 
+  width: 100%; 
+  height: 100%;
+  overflow: auto; 
+  background-color: rgba(1,1,1,0.9); 
+  color: #ffffff;
+
+  transition: 1s;
+  left: 0;
+  top: 0;
+  animation: smoothEnter 0.5s;
+}
+.alertPopup h3{
+  
+  text-align: right;
+  margin-right:20px;
+  margin-bottom: 30px;
+}
+.alertPopup .container{
+  width: 50%;
+  height: auto;
+  padding:0px 10px 30px 10px;
+  margin-top: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  background: #ffffff;
+  color: #000000;
+  text-align: center;
+
+}
+/*making the popup responsive*/
+@media(max-width: 768px){
+  .imgPopup p{
+    padding: 0px;
+  }
+  .imgPopup img{
+    width: 90%;
+  }
+
+}
+
+/*-------------------- Style for Form Section on Contact Page starts here ------------- */
+
+/*Form Container Properties */
+.form_container{
+  width: 100%;
+  text-align: center;;
+  padding-bottom: 20px;
+ }
+
+ /*Adding a dashed border to Input type */
+.form_container input{
+  border-radius: 5px;
+  width:300px;
+  height:25px;
+  text-align: center;
+  border: 1px dashed #000000;
+  margin:10px 0px 20px 0px;
+  box-shadow: 1px 3px #888888;
+}
+
+/*Modifying the text seen on input type */
+input{
+  font-family: monospace;
+  font-size: 16px;
+  color: #000000;
+
+}
+input[type="text"]{
+  font-family: monospace;
+  font-size: 16px;
+  color: #369CEF;
+
+}
+#fback2{
+  display: none;
+}
+textarea{
+  width:300px;
+  height:100px;
+  font-family: monospace;
+  font-size: 16px;
+  overflow: hidden;
+  border-radius: 5px;
+  text-align: center;
+  border: 1px dashed #000000;
+  margin:10px 0px 20px 0px;
+  box-shadow: 1px 3px #888888;
+  resize: none;
+}
+select{
+  width: 300px;
+  padding: 5px;
+}
+input[type="submit"],input[type="button"]{
+  background: #369CEF;
+  color: #ffffff;
+  width:200px;
+  transition: 1s;
+  border: 1px solid #369CEF;
+  box-shadow: none;
+}
+
+/* Change colour of text and background on hovering over submit button */
+input[type = "submit"]:hover,input[type="button"]:hover{
+  background:#000000;
+  color: #369CEF;
+}
+
+/*
+
+Project Created by Pratik Prajapati 
+Submitted to University of Northampton
+
+
+*/
